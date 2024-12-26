@@ -1,0 +1,10 @@
+1.临时修改CUDA版本
+export PATH=/usr/local/cuda-11.3/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.3/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+2.运行代码
+bash run.sh ./projects/configs/baselines/Multimodal-R50_img1600_128x128x10.py 2
+bash run.sh ./projects/Cascade-Occupancy-Network/Multimodal-R50_img1600_cascade_x4.py 2
+
+bash run_eval.sh $PATH_TO_CFG $PATH_TO_CKPT 2
+bash run_eval.sh $PATH_TO_CFG $PATH_TO_CKPT 2 --show --show-dir $PATH
